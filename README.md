@@ -2,7 +2,7 @@
 
 ## Inhaltsverzeichniss 
 
-### [1.](Installation/Umgebung.md "Umgebung")
+### [1. Installation](Installation/Umgebung.md "Umgebung")
 
 ### [2.](Theorie/Übertragunsrate.md "2. Übertragunsrate, Verfügbarkeit")
 
