@@ -7,3 +7,58 @@
 ### [2.](Theorie/Übertragunsrate.md "2. Übertragunsrate, Verfügbarkeit")
 
 ### [3.](Theorie/WAN-Technologie.md "3. WAN-Technologie")
+
+## Dokumentation
+SSH-Key erstellen (lokal)
+
+ACHTUNG: Auf Windows muss zuerst Git/Bash installiert werden. Anschliessend können die Befehle in der Git/Bash ausgeführt werden. Dabei handelt es sich nur um die Shell von Linux, die auf Windows ausgeführt wird. Alternativ können Sie für die meisten Befehle auch die PowerShell verwenden.
+
+    Terminal (Bash) öffnen
+    Folgenden Befehl mit der Account-E-Mail von GitHub einfügen:
+
+      $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
+
+    Neuer SSH-Key wird erstellt:
+
+      Generating public/private rsa key pair.
+
+    Bei der Abfrage, unter welchem Namen der Schlüssel gespeichert werden soll, die Enter-Taste drücken (für Standard):
+
+      Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
+
+    Nun kann ein Passwort für den Key festgelegt werden. Ich empfehle dieses zu setzen und anschliessend dem SSH-Agent zu hinterlegen, sodass keine erneute Eingabe (z.B. beim Pushen) notwendig ist:
+
+      Enter passphrase (empty for no passphrase): [Passwort]
+      Enter same passphrase again: [Passwort wiederholen]
+
+SSH-Key dem SSH-Agent hinzufügen
+
+Windows und Linux
+
+Datei %HOME%/.ssh/id_rsa.pub oder $HOME/.ssh/id_rsa.pub in Zwischenablage kopieren.
+
+macOS
+
+    Terminal (Bash) öffnen
+    SSH-Agent starten:
+
+      $ eval "$(ssh-agent -s)"
+      Agent pid 931
+
+    Ab Version macOS High Sierra 10.12.2 muss das ~/.ssh/config File angepasst werden, damit SSH-Keys automatisch dem SSH-Agent hinzugefügt werden:
+
+      $ sudo nano ~/.ssh/config
+      
+      Host *
+      AddKeysToAgent yes
+      UseKeychain yes
+      IdentityFile ~/.ssh/id_rsa
+
+    Nun muss der Schlüssel dem Agent nur noch hinzugefügt werden:
+
+      $ ssh-add -k ~/.ssh/id_rsa
+
+    Der SSH-Key muss nun nur noch kopiert und anschliessend dem GitHub-Account hinzugefügt werden (siehe "SSH-Key hinzufügen"):
+
+      $ cat ~/.ssh/id_rsa.pub
+      # Kopiert den Angezeiten Inhalt der id_rsa.pub Datei in die Zwischenablage
