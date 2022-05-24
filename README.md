@@ -62,3 +62,28 @@ macOS
 
       $ cat ~/.ssh/id_rsa.pub
       # Kopiert den Angezeiten Inhalt der id_rsa.pub Datei in die Zwischenablage
+      
+      Repository klonen
+
+    Zu Testzwecken soll ein Repository geklont werden. Dazu sind folgende Befehle notwendig:
+    Terminal (Bash) öffnen
+    Repository klonen:
+
+      $ git clone https://github.com/mc-b/M300
+
+    In das M300-Verzeichnis wechseln:
+
+      $ cd M300
+
+    Repository aktualisieren und Status anzeigen:
+
+      $ git pull
+
+      Already up to date.
+
+      $ git status
+
+      Your branch is up to date with 'origin/master'.
+
+    Die Statusmeldung soll dabei mitteilen, dass das lokale Repository mit dem Originalen übereinstimmt.
+
