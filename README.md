@@ -4,13 +4,13 @@
 
 ## Inhaltsverzeichniss 
 
-### [1. Theorie ](M300/Theorie.md "Theorie")
+### [Theorie ](M300/Theorie.md "Theorie")
 
-### [1. Git](M300/Git.md "1. Git")
+### [Git](M300/Git.md "Git")
 
-### [2. Vagrant](M300/Vagrant.md "2. Vagrant")
+### [Vagrant](M300/Vagrant.md "Vagrant")
 
-### [3. Docker](M300/Docker.md "3. Docker")
+### [Docker](M300/Docker.md "Docker")
 
 ## Dokumentation
 SSH-Key erstellen (lokal)
