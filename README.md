@@ -4,7 +4,7 @@
 
 ## Inhaltsverzeichniss  
 
-### [Theorie ](M300-Services/M300/Theorie.md "Theorie")
+### [Theorie ](/M300-Services/M300/Theorie.md "Theorie")
 
 ### [Git](M300-Services/M300/Git.md "Git")
 
