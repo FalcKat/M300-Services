@@ -35,3 +35,7 @@ In Docker Registries werden Images abgelegt und verteilt
 Die Standard-Registry ist der Docker Hub, auf dem tausende öffentlich verfügbarer Images zur Verfügung stehen, aber auch "offizielle" Images.
 
 Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "private" Images zu hosten, aber auch um den Overhead zu vermeiden, der mit dem Herunterladen von Images über das Internet einhergeht.
+
+## Docker Befehle 
+
+<img width="553" alt="Docker" src="https://user-images.githubusercontent.com/89446428/172325879-2300aa07-fbf1-400e-91c1-823af3ec9400.PNG">
